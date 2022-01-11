@@ -20,7 +20,7 @@
         <div class="max-w-sm rounded overflow-hidden shadow-lg text-center">
           <div class="px-6 py-4 bg-gray-900 text-white">
             <div class="font-bold text-sm md:text-xl mb-2">Confirmed</div>
-            <h2 class="text-base counter" data-target="<%= general.cases %>">
+            <h2 class="text-base counter" data-target="<%= general.recovered %>">
               0
             </h2>
           </div>
@@ -31,7 +31,7 @@
         <div class="max-w-sm rounded overflow-hidden shadow-lg text-center">
           <div class="px-6 py-4 bg-green-600 text-white">
             <div class="font-bold text-sm md:text-xl mb-2">Recovered</div>
-            <p class="text-base counter" data-target="<%= general.recovered %>">
+            <p class="text-base counter" data-target="<%= general.cases %>">
               0
             </p>
           </div>
@@ -42,7 +42,7 @@
         <div class="max-w-sm rounded overflow-hidden shadow-lg text-center">
           <div class="px-6 py-4 bg-red-600 text-white">
             <div class="font-bold text-sm md:text-xl mb-2">Deaths</div>
-            <p class="text-base counter" data-target="<%= general.deaths %>">
+            <p class="text-base counter" data-target="<%= general.active %>">
               0
             </p>
           </div>
@@ -53,7 +53,7 @@
         <div class="max-w-sm rounded overflow-hidden shadow-lg text-center">
           <div class="px-6 py-4 bg-yellow-600 text-white">
             <div class="font-bold text-sm md:text-xl mb-2">Active</div>
-            <p class="text-base counter" data-target="<%= general.active %>">
+            <p class="text-base counter" data-target="<%= general.deaths %>">
               0
             </p>
           </div>
@@ -111,19 +111,7 @@
             <td class="border px-4 py-2 <%= item.todayCases > 0 ? 'bg-yellow-400' : '' %>">
               <%= item.todayCases ? item.todayCases.toLocaleString() :
               item.todayCases || 0 %>
-            </td>
-            <td class="border px-4 py-2">
-              <%= item.deaths ? item.deaths.toLocaleString() : item.deaths || 0
-              %>
-            </td>
-            <td class="border px-4 py-2 <%= item.todayCases > 0 ? 'bg-red-400' : '' %>">
-              <%= item.todayDeaths ? item.todayDeaths.toLocaleString() :
-              item.todayDeaths || 0 %>
-            </td>
-            <td class="border px-4 py-2">
-              <%= item.recovered ? item.recovered.toLocaleString() :
-              item.recovered || 0 %>
-            </td>
+            </td>                    
             <td class="border px-4 py-2">
               <%= item.active ? item.active.toLocaleString() : item.active || 0
               %>

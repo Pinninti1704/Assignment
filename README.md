@@ -1,6 +1,4 @@
-# COVID-19
-### Tracking Coronavirus
-https://tracking-covid-19.herokuapp.com/
+
 
 Assuming, You have _Node_ and _npm_ properly installed on your machine, you need to:
 

@@ -1,4 +1,4 @@
-
+Covid tracker web application 
 
 Assuming, You have _Node_ and _npm_ properly installed on your machine, you need to:
 

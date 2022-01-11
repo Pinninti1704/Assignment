@@ -1,0 +1,22 @@
+<footer class="text-center py-5 mt-10">
+  <h6 class="font-bold">
+    <a href="https://github.com/Pinninti1704/" target="_blank" class="hover:text-blue-800">Do not share</a>
+    &copy <%- (new Date().getFullYear() > 2020) ? '2020 &hyphen; ' + new Date().getFullYear() : '2020' %>
+  </h6>
+</footer>
+
+<% if (typeof page === 'undefined') { %>
+<script src="/leaflet/leaflet.js"></script>
+<script src="/js/counters.js"></script>
+<script src="/js/data-table-search.js"></script>
+<script src="/js/map.js"></script>
+<% } else { %>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/moment/moment.min.js"></script>
+<script src="/chart/Chart.min.js"></script>
+<script src="/js/chart.js"></script>
+<% } %>
+
+</body>
+
+</html>

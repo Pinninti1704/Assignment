@@ -18,19 +18,20 @@ app.locals.moment = moment;
 
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
-
+// Issue-4- start  - unable to load histogram
 app.use(
   '/leaflet',
-  express.static(path.join(__dirname, '/node_modules/leaflet/'))
+  express.static(path.join(__dirname, '/node_modules/leaflet/dist'))
 );
 app.use(
   '/chart',
-  express.static(path.join(__dirname, '/node_modules/chart.js/'))
+  express.static(path.join(__dirname, '/node_modules/chart.js/dist'))
 );
 app.use(
   '/moment',
-  express.static(path.join(__dirname, '/node_modules/moment/'))
+  express.static(path.join(__dirname, '/node_modules/moment/min'))
 );
+// Issue-4- end  - unable to load histogram  //fixed by adding correct path.
 
 // Set the view engine to ejs
 app.set('view engine', 'ejs');

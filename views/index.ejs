@@ -111,12 +111,28 @@
             <td class="border px-4 py-2 <%= item.todayCases > 0 ? 'bg-yellow-400' : '' %>">
               <%= item.todayCases ? item.todayCases.toLocaleString() :
               item.todayCases || 0 %>
-            </td>                    
+            </td>      
+            
+            <!-- Issue-3-start  Filed mapping missed -->    
+            <td class="border px-4 py-2">
+              <%= item.deaths ? item.deaths.toLocaleString() : item.deaths|| 0 %>
+            </td>
+            <td class="border px-4 py-2 <%= item.todayDeaths > 0 ? 'bg-red-400' : '' %>">
+              <%= item.todayDeaths ? item.todayDeaths.toLocaleString() : item.todayDeaths|| 0 %>
+            </td>
+
+            <td class="border px-4 py-2">
+              <%= item.recovered ? item.recovered.toLocaleString() : item.recovered|| 0 %>
+            </td>
+             <!-- Issue-3-End  Filed mapping missed -->    
+            
             <td class="border px-4 py-2">
               <%= item.active ? item.active.toLocaleString() : item.active || 0
               %>
             </td>
-            <td class="border px-4 py-2">
+            <!-- Issue-1-start  Filed background fix-->
+            <td class="border px-4 py-2 <%= item.critical > 1000 ? 'bg-red-400' : '' %>">
+              <!-- Issue-1-End  Filed background fix-->
               <%= item.critical ? item.critical.toLocaleString() : item.critical
               || 0 %>
             </td>

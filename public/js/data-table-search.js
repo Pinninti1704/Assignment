@@ -24,14 +24,15 @@ const filter = term => {
 
     for (let j = 0; j < td.length; j++) {
       if (td[j].textContent.toLowerCase().includes(term.toLowerCase())) {
-        found = true;
+        found = true;   
         count++;
       }
     }
 
     if (found) {
       tr[i].style.display = '';
-      found = true;
+      //found = true;  //Issue-2-start  search login not working
+      found =false;  //Issue-2-End  search login not working
       console.log('success render search');
     } else {
       tr[i].style.display = 'none';
